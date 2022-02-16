@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  box-sizing: border-box;
+  display: flex;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.split {
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  transition: all 1s ease-in-out;
+  overflow: hidden;
+}
+
+.left {
+  flex: 1;
+  background-image: url(../img/ps.jpg);
+}
+
+.right {
+  flex: 1;
+  background-image: url(../img/xbox.jpg);
+}
+
+.split::before,
+.split::before {
+  content: '';
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.left::before {
+  background-color: rgba(87, 84, 236, 0.7);
+}
+
+.right::before {
+  background-color: rgba(43, 43, 43, 0.8);
+}
+
+.left:hover {
+  /* flex: 3; */
+  flex: 0 0 75%;
+}
+
+.right:hover {
+  flex: 0 0 75%;
+}
+
+.split__header {
+  position: absolute;
+  left: 50%;
+  top: 35%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.split__heading {
+  font-size: 6.5rem;
+  color: white;
+  margin-bottom: 10rem;
+  white-space: nowrap;
+}
+
+.btn {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 0.3rem solid white;
+  padding: 2.5rem 8rem;
+  font-weight: bold;
+}
+
+.btn--left:hover {
+  background-color: rgb(87, 84, 236);
+  border: none;
+}
+
+.btn--right:hover {
+  background-color: rgb(28, 122, 28);
+  border: none;
+}
+
+@media only screen and (max-width: 87.5em) {
+  .left {
+    background-position: 50% center;
+  }
+
+  .right {
+    background-position: 15% center;
+  }
+}
+
+@media only screen and (max-width: 50em) {
+  html {
+    font-size: 50%;
+  }
+  .left {
+    background-position: 70% center;
+  }
+
+  .right {
+    background-position: 30% center;
+  }
+
+  .split__heading {
+    font-size: 4rem;
+    margin-bottom: 6rem;
+  }
+  .btn {
+    padding: 2rem 4rem;
+  }
+}

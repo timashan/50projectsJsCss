@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Muli', sans-serif;
+  font-size: 1.6rem;
+  box-sizing: border-box;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: steelblue;
+  color: white;
+}
+
+.container {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 2rem 4rem;
+  border-radius: 0.5rem;
+}
+
+.form-control {
+  padding: 2rem 0 0 0;
+  position: relative;
+  width: 30rem;
+  margin-bottom: 5rem;
+}
+
+.form__heading {
+  margin: 3rem 0;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.label {
+  font-size: 1.8rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(2rem);
+  transition: all 0.5s;
+}
+
+.input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid white;
+  display: block;
+  width: 100%;
+  padding: 1rem 0;
+  font-size: 1.8rem;
+  color: white;
+}
+
+.input:focus,
+.input:valid {
+  outline: none;
+  border-color: lightblue;
+}
+
+.input + label span {
+  display: inline-block;
+  color: white;
+  transition: transform cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.3s;
+}
+
+.input:focus + label span,
+.input:not(:placeholder-shown) + label span {
+  transform: translateY(-2rem);
+  color: lightblue;
+}
+
+.btn {
+  font-family: inherit;
+  font-size: 1.6rem;
+  border: none;
+  background-color: lightblue;
+  padding: 1.5rem 0;
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 3rem;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+
+.btn:hover {
+  background-color: rgb(150, 210, 230);
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.form__text a:link,
+a:visited {
+  color: lightblue;
+  text-decoration: none;
+}

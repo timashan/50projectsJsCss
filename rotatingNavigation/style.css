@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  background-color: #333;
+  height: 100vh;
+}
+
+.container-circle {
+  position: fixed;
+  top: -10rem;
+  left: -10rem;
+}
+
+.circle {
+  background-color: rgb(253, 86, 86);
+  height: 20rem;
+  width: 20rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+.container.show-nav + .container-circle .circle {
+  transform: rotate(-90deg);
+}
+
+.container.show-nav {
+  transform: rotate(-20deg);
+}
+
+.container.show-nav ~ nav {
+  transform: translateX(0);
+}
+
+.close,
+.open {
+  border: none;
+  background-color: transparent;
+  height: 10rem;
+  font-size: 2.6rem;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  cursor: pointer;
+}
+
+.open {
+  left: 60%;
+}
+
+.close {
+  top: 60%;
+  transform-origin: top left;
+  transform: rotate(90deg);
+}
+
+.container {
+  padding: 3rem 0;
+  background-color: #f7f7f7;
+  transform-origin: top left;
+  transition: transform 0.5s linear;
+}
+
+.content {
+  width: 100rem;
+  margin: 10rem auto;
+}
+
+.content img {
+  width: 100%;
+}
+
+.nav {
+  position: fixed;
+  left: 5rem;
+  bottom: 8rem;
+  color: #fff;
+  transform: translateX(-150%);
+  transition: transform 0.5s ease-in;
+}
+
+.nav-list {
+  list-style-type: none;
+}
+
+.nav-list li:not(:last-child) {
+  margin-bottom: 4rem;
+}
+
+.nav-list li + li {
+  margin-left: 1.5rem;
+}
+.nav-list li + li + li {
+  margin-left: 3rem;
+}
+
+.nav-list li i {
+  margin-right: 1rem;
+  font-size: 2rem;
+}
+
+.nav__link:link,
+.nav__link:visited {
+  font-size: 1.6rem;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+p {
+  margin-bottom: 2rem;
+  color: #444;
+}
+
+h1 {
+  line-height: 1;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+  font-style: italic;
+  color: #555;
+  margin-bottom: 2rem;
+}

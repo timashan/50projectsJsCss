@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.6rem;
+  box-sizing: border-box;
+}
+
+.section {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-bg {
+  background: url(../img/cuttingSteel.jpg) no-repeat center center/100%;
+  height: 100%;
+  top: -30px;
+  left: -30px;
+  width: calc(100vw + 60px);
+  height: calc(100vh + 60px);
+  position: relative;
+}
+
+.loading-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 6rem;
+  color: #fff;
+}

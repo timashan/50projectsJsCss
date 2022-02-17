@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
 
 * {
   margin: 0;
@@ -16,7 +16,7 @@ html {
 }
 
 body {
-  font-family: "Muli", sans-serif;
+  font-family: 'Muli', sans-serif;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
@@ -53,19 +53,19 @@ body {
 }
 
 .panel--1 {
-  background-image: url(img/img-1.jpg);
+  background-image: url(../img/img-1.jpg);
 }
 .panel--2 {
-  background-image: url(img/img-2.jpg);
+  background-image: url(../img/img-2.jpg);
 }
 .panel--3 {
-  background-image: url(img/img-3.jpg);
+  background-image: url(../img/img-3.jpg);
 }
 .panel--4 {
-  background-image: url(img/img-4.jpg);
+  background-image: url(../img/img-4.jpg);
 }
 .panel--5 {
-  background-image: url(img/img-5.jpg);
+  background-image: url(../img/img-5.jpg);
 }
 
 .panel h3 {

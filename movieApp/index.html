@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+    <title>Movie App</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <ul class="nav__list">
+          <li>
+            <button
+              class="nav__btn"
+              data-url="/discover/movie?sort_by=popularity.desc"
+            >
+              popular movies
+            </button>
+          </li>
+          <li>
+            <button
+              class="nav__btn"
+              data-url="/discover/movie/?certification_country=US&certification=R&sort_by=vote_average.desc"
+            >
+              highest R-rated
+            </button>
+          </li>
+          <li>
+            <button
+              class="nav__btn"
+              data-url="/discover/movie?certification_country=US&certification.lte=G&sort_by=popularity.desc"
+            >
+              Kids
+            </button>
+          </li>
+          <li>
+            <button
+              class="nav__btn"
+              data-url="/discover/movie?with_genres=18&sort_by=vote_average.desc&vote_count.gte=10"
+            >
+              top drama
+            </button>
+          </li>
+        </ul>
+      </nav>
+      <form action="#" class="search">
+        <input type="text" placeholder="Search" class="search__input" />
+      </form>
+    </header>
+    <main class="main">
+      <!-- <div class="movie">
+        <img
+          class="movie__pic"
+          src="https://image.tmdb.org/t/p/w1280/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg"
+        />
+
+        <div class="movie__details">
+          <div class="movie__title">Movie title</div>
+          <div class="movie__rating">9.8</div>
+        </div>
+        <div class="overview">
+          <h3>Overview</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
+            ducimus adipisci quo dolores ab nam magnam. Iure fugiat explicabo
+            facere! lore
+          </p>
+        </div>
+      </div> -->
+    </main>
+  </body>
+</html>

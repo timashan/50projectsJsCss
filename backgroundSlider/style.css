@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  box-sizing: border-box;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: relative;
+  transition: background-image 0.5s ease;
+}
+
+body::before {
+  content: '';
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+}
+
+.slide-container {
+  height: 70vh;
+  width: 70vw;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 15px 6px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.2);
+}
+
+.slide {
+  position: absolute;
+  top: -15vh;
+  left: -15vw;
+  height: 100vh;
+  width: 100vw;
+  opacity: 0;
+  z-index: 1;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 0.5s ease;
+}
+
+.slide--1 {
+  background-image: url(../img/mountains.jpg);
+}
+.slide--2 {
+  background-image: url(../img/water.jpg);
+}
+.slide--3 {
+  background-image: url(../img/fire.jpg);
+}
+.slide--4 {
+  background-image: url(../img/wind-turbine.jpg);
+}
+.slide--5 {
+  background-image: url(../img/lightning.jpg);
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.btn {
+  position: fixed;
+  background-color: transparent;
+  border: 2px solid orange;
+  font-size: 3rem;
+  padding: 2rem;
+  color: white;
+  top: 50%;
+  transform: translateY(-50%);
+
+  cursor: pointer;
+}
+
+.btn--left {
+  left: calc(15vw - 6.5rem);
+}
+.btn--right {
+  right: calc(15vw - 6.5rem);
+}

@@ -26,6 +26,9 @@ cupsContainer.addEventListener('click', function (e) {
     }
   });
 
+  percentage.style.visibility = 'visible';
+  if (cupsFull.length === 0) percentage.style.visibility = 'hidden';
+
   const cupFilled = (cupsFull.length / totalCups) * 100;
   percentage.style.height = `${cupFilled}%`;
   percentage.innerText = `${cupFilled}%`;

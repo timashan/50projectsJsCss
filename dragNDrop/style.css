@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  box-sizing: border-box;
+  height: 100vh;
+  background-color: steelblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  gap: 2rem;
+}
+
+.empty {
+  height: 15rem;
+  width: 15rem;
+  background-color: white;
+  border: 0.3rem solid black;
+}
+
+.fill {
+  height: 100%;
+  width: 100%;
+  background-image: url(https://source.unsplash.com/random/150x150);
+  cursor: pointer;
+}
+
+.fill--hold {
+  border: 0.3rem solid #aaa;
+}
+
+.empty--hover {
+  background-color: #222;
+  border: 0.3rem dashed white;
+}

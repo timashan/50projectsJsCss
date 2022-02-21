@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.6rem;
+  box-sizing: border-box;
+  color: #555;
+  letter-spacing: 1.2px;
+  line-height: 1.8;
+}
+
+.center {
+  width: 120rem;
+  margin: 0 auto;
+}
+
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(https://images.pexels.com/photos/450035/pexels-photo-450035.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)
+      no-repeat bottom/cover;
+
+  position: relative;
+}
+
+.hero__header {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.hero__header h1 {
+  font-size: 4.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero__header p {
+  font-size: 2rem;
+}
+
+.navigation {
+  padding: 1.5rem 0;
+  background-color: #222;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: background-color 0.3s, padding 0.3s ease-in-out;
+}
+
+.navigation.active {
+  background-color: white;
+  padding: 0.5rem 0;
+}
+
+.navigation.active .nav {
+  color: #222;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.nav__list {
+  display: flex;
+  list-style-type: none;
+  gap: 3.5rem;
+}
+
+.nav__link:link,
+.nav__link:visited {
+  color: inherit;
+  text-decoration: none;
+  font-size: 1.6rem;
+  transition: 0.3s;
+}
+
+.nav__link--active:link,
+.nav__link--active:visited {
+  color: #c0392b;
+  font-weight: bold;
+}
+
+.nav__link--active,
+.nav__link:hover,
+.nav__link:active {
+  color: #c0392b;
+  font-weight: bold;
+}
+
+.logo {
+  padding: 0 1rem;
+}
+
+.logo a:link,
+.logo a:visited {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.section {
+  padding: 3rem 0;
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 2rem;
+  letter-spacing: -1px;
+}
+
+p {
+  margin-bottom: 2rem;
+}

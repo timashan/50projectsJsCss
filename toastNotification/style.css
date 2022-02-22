@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+  box-sizing: border-box;
+  background-color: rebeccapurple;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.btn {
+  background-color: white;
+  color: rebeccapurple;
+  padding: 1.8rem 1.8rem;
+  border-radius: 5px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.5s, box-shadow 0.5s;
+}
+
+.btn:hover {
+  background-color: #ccc;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.4);
+}
+
+.toasts {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.toast {
+  background-color: white;
+  padding: 2rem 4rem;
+  border-radius: 0.5rem;
+  transition: transform 0.5s;
+}
+
+.toast.hide {
+  transform: translateX(300%);
+}
+
+.toast:not(:last-of-type) {
+  margin-bottom: 1rem;
+}
+
+.toast.info {
+  color: rebeccapurple;
+}
+
+.toast.success {
+  color: green;
+}
+
+.toast.fail {
+  color: red;
+}

@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Muli', sans-serif;
+  font-size: 1.6rem;
+  box-sizing: border-box;
+  background-color: #3b3b98;
+  color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: #23235b;
+  padding: 3rem 2rem 2rem;
+  width: 35rem;
+}
+
+.container h2 {
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.result {
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+
+.result__text {
+  flex: 1;
+  font-size: 1.8rem;
+  padding: 0 1rem;
+  overflow: hidden;
+}
+
+.settings {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.setting {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  font-family: inherit;
+  color: inherit;
+  font-size: 1.8rem;
+  padding: 1rem;
+  background-color: #3b3b98;
+  border: none;
+  cursor: pointer;
+}
+.btn--copy {
+  margin: 0.5rem;
+  width: 4rem;
+  height: 4rem;
+}
+
+#length {
+  width: 5rem;
+  font-family: inherit;
+}

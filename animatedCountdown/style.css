@@ -144,5 +144,5 @@ body {
 }
 
 .btn--replay:hover {
-  transform: rotate(-5deg);
+  transform: rotate(-5deg) scale(1.1);
 }

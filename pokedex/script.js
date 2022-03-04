@@ -40,7 +40,7 @@ const createPokemon = function (pokemon) {
           src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${
             pokemon.id
           }.png"
-          alt=""
+          alt="${pokemon.name}"
         />
       </div>
       <div class="pokemon__info">

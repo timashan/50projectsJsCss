@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.6rem;
+  box-sizing: border-box;
+  background-color: #9b59b6b3;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.phone {
+  height: 60rem;
+  width: 34rem;
+  border: 0.3rem solid white;
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.phone__imgs {
+  position: relative;
+  flex: 1;
+}
+
+.phone__imgs img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.phone__imgs img.show {
+  opacity: 1;
+}
+
+.nav {
+  flex: 0 0 6rem;
+  background-color: white;
+}
+
+.nav__list {
+  height: 100%;
+  list-style-type: none;
+  display: flex;
+  color: #777;
+  font-size: 1.2rem;
+}
+
+.nav__btn {
+  flex: 1;
+  height: 100%;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.nav__btn:hover,
+.nav__btn.active {
+  color: #8e44ad;
+}
+
+.fas {
+  font-size: 1.6rem;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css "
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+      referrerpolicy="no-referrer"
+    />
+    <title>Password Strength Background</title>
+  </head>
+  <body>
+    <div class="background"></div>
+    <div class="bg-white p-10 text-center rounded shadow-md">
+      <h1 class="text-3xl">Image Password Strength</h1>
+      <p class="text-sm mt-2 text-gray-700">
+        Change the password to see the effect
+      </p>
+      <div class="my-4 text-left">
+        <label for="">Email:</label>
+        <input
+          type="email"
+          class="border w-full rounded mt-2 p-2"
+          placeholder="Enter Email"
+        />
+      </div>
+
+      <div class="my-4 text-left">
+        <label for="">Password:</label>
+        <input
+          type="password"
+          class="border w-full rounded mt-2 p-2"
+          placeholder="Enter Password"
+          id="password"
+        />
+      </div>
+
+      <button class="bg-black text-white w-full rounded p-2 mt-4">
+        Submit
+      </button>
+    </div>
+  </body>
+</html>

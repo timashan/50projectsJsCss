@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Muli', sans-serif;
+  font-size: 1.6rem;
+  box-sizing: border-box;
+  background-color: #fbfcfe;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h2 {
+  margin-bottom: 3rem;
+}
+
+.container {
+  padding: 5rem 5rem 3rem 5rem;
+  border: 0.3rem solid #000;
+  border-radius: 0.5rem;
+  text-align: center;
+  background-color: white;
+  margin: 0 1rem;
+}
+
+.info {
+  display: inline-block;
+  max-width: 40rem;
+  background-color: #eee;
+  padding: 1rem;
+  color: #777;
+}
+
+.code-container {
+  margin: 5rem 0;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.code {
+  border: 1px solid #eee;
+  border-radius: 0.5rem;
+  text-align: center;
+  font-size: 7.5rem;
+  width: 10rem;
+  height: 12rem;
+}
+
+.code:valid {
+  border-color: #3498db;
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.code::-webkit-inner-spin-button,
+.code::-webkit-outer-spin-button {
+  appearance: none;
+}
+
+@media only screen and (max-width: 37.5em) {
+  html {
+    font-size: 50%;
+  }
+
+  .container {
+    padding: 3rem 3rem 2rem 3rem;
+  }
+
+  .code {
+    font-size: 6.5rem;
+    width: 8rem;
+    height: 10rem;
+  }
+}

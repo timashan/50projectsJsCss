@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.6rem;
+  box-sizing: border-box;
+  background-image: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.title {
+  position: absolute;
+  top: 3rem;
+}
+
+.range-container {
+  position: relative;
+}
+
+.range {
+  appearance: none;
+  width: 30rem;
+  cursor: pointer;
+}
+
+.range::-webkit-slider-runnable-track {
+  height: 1rem;
+  background-color: purple;
+  border-radius: 50rem;
+}
+
+.range::-webkit-slider-thumb {
+  appearance: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  margin-top: -0.7rem;
+  background-color: white;
+  border: 1px solid purple;
+}
+
+.range + label {
+  background-color: white;
+  width: 8rem;
+  padding: 0.5rem;
+  text-align: center;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  top: -4rem;
+  left: 11rem;
+  position: absolute;
+  /* left: 15rem;
+  transform: translateX(-50%); */
+  transform: translateY(5rem);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.5s ease, opacity 0.5s;
+}
+
+.range:active + label {
+  transform: translateY(0);
+  opacity: 1;
+}

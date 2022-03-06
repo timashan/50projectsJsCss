@@ -14,6 +14,7 @@ const getUsersJSON = async function () {
 
 const createUsers = async function () {
   const { results } = await getUsersJSON();
+  resultsContainer.innerHTML = '';
   results.forEach(user => {
     const userEl = document.createElement('li');
     userEl.className = 'result';

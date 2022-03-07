@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem;
+  box-sizing: border-box;
+  height: 100vh;
+  background-image: linear-gradient(315deg, #b8c6db, #f5f7fa);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quiz-container {
+  background-color: #fff;
+  width: 60rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+h3 {
+  text-align: center;
+  margin: 7rem 0 5rem 0;
+}
+
+.answers {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 0 0 5rem 7rem;
+}
+
+.answers input {
+  display: none;
+}
+
+.answers label {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.radio {
+  display: inline-block;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  border: 1px solid purple;
+  position: relative;
+}
+
+.radio:before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  height: 1.2rem;
+  width: 1.2rem;
+  border-radius: 50%;
+  background-color: #8e44ad;
+  transition: transform 0.3s;
+}
+
+.answers input:checked + label .radio:before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.answers input:checked + label .answer {
+  color: #8e44ad;
+}
+
+.btn {
+  display: block;
+  border: none;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: 1.8rem;
+  background-color: #8e44ad;
+  width: 100%;
+  padding: 1.8rem 0;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.4s;
+}
+
+.btn:hover {
+  background-color: #783894;
+}
+
+.btn:active {
+  transform: translateY(0.2rem);
+}

@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Muli', sans-serif;
+  font-size: 1.6rem;
+  box-sizing: border-box;
+  background-color: #eee;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.text {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+
+.btn {
+  font-size: 2rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.btn--open {
+  position: fixed;
+  top: 1rem;
+  left: 1.5rem;
+}
+
+.btn--close {
+  position: fixed;
+  top: 4rem;
+  right: 4rem;
+  color: #aaa;
+}
+
+.nav {
+  background-color: #222;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  transform: translateX(-100%);
+  transition: transform 0.4s ease-in-out;
+}
+
+.nav__logo {
+  margin: 0 0 2rem 3rem;
+}
+
+.nav--black {
+  background-color: #221f1f;
+  max-width: 48rem;
+  min-width: 38rem;
+  width: 60%;
+  transition-delay: 0.4s;
+}
+
+.nav--black.visible {
+  transition-delay: 0s;
+}
+
+.nav--red {
+  background-color: #e50914;
+  width: 95%;
+  transition-delay: 0.2s;
+}
+
+.nav--white {
+  width: 95%;
+  padding: 4rem 0;
+  background-color: white;
+}
+
+.nav--white.visible {
+  transition-delay: 0.4s;
+}
+
+.nav__list {
+  list-style-type: none;
+}
+
+.nav__list li {
+  cursor: pointer;
+  position: relative;
+  padding: 1rem 0 1rem 4rem;
+}
+
+.nav__list li a {
+  text-transform: uppercase;
+  color: #333;
+  text-decoration: none;
+}
+
+.nav__list li::before {
+  content: '';
+  height: 100%;
+  width: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: width 0.5s;
+  z-index: -1;
+}
+
+.nav__list--outer .nav__link::before {
+  background-color: #221f1f;
+}
+
+.nav__list--inner .nav__link::before {
+  background-color: #e50914;
+}
+
+.nav__list .nav__link:hover::before {
+  width: 100%;
+}
+
+.nav__link a {
+  transition: color 0.5s;
+}
+
+.nav__list--outer .nav__link:hover a {
+  color: white;
+}
+
+.visible {
+  transform: translate(0);
+}

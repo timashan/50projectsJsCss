@@ -6,15 +6,26 @@ for (let i = 0; i < TOTAL_SQUARES; i++) {
   const square = document.createElement('div');
   square.classList.add('square');
   container.appendChild(square);
-
-  square.addEventListener('mouseover', function (e) {
-    const randomColor = colors[Math.floor(Math.random() * colors.length)];
-    this.style.backgroundColor = `${randomColor}`;
-    this.style.boxShadow = `0 0 2px ${randomColor}, 0 0 10px ${randomColor}`;
-  });
-
-  square.addEventListener('mouseleave', function (e) {
-    this.style.backgroundColor = '#1d1d1d';
-    this.style.boxShadow = `0 0 2px #000`;
-  });
 }
+
+let square;
+
+const resetSquare = function () {
+  if (!square) return;
+  square.style.backgroundColor = '#1d1d1d';
+  square.style.boxShadow = `0 0 2px #000`;
+};
+
+container.addEventListener('mouseover', function (e) {
+  resetSquare();
+  square = e.target.closest('.square');
+  if (!square) return;
+
+  const randomColor = colors[Math.floor(Math.random() * colors.length)];
+  square.style.backgroundColor = `${randomColor}`;
+  square.style.boxShadow = `0 0 2px ${randomColor}, 0 0 10px ${randomColor}`;
+});
+
+container.addEventListener('mouseleave', function () {
+  resetSquare();
+});
